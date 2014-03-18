@@ -1,8 +1,6 @@
 require 'test_helper'
 
 class NavigationTest < ActionDispatch::IntegrationTest
-  fixtures :all
-
   setup { MongoMetrics::Metric.delete_all }
 
   test "can visualize notifications" do
