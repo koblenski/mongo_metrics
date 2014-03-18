@@ -23,6 +23,11 @@ class NavigationTest < ActionDispatch::IntegrationTest
     assert_empty MongoMetrics::Metric.where(id: metric.id)
   end
 
+  test "does not log engine actions" do
+    get mongo_metrics.root_path
+    assert 0, MongoMetrics::Metric.count
+  end
+
   # test "the truth" do
   #   assert true
   # end
