@@ -2,6 +2,7 @@ require "mongoid"
 require "jquery-rails"
 require "mongo_metrics/engine"
 require "active_support/notifications"
+require "mongo_metrics/csv_streamer"
 
 module MongoMetrics
   EVENT = "process_action.action_controller"
